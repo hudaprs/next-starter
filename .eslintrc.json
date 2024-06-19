@@ -21,6 +21,7 @@
 		"@typescript-eslint/explicit-function-return-type": "error", // Requires explicit return types on functions
 		"func-style": ["error", "expression"], // Enforces the use of function expressions for defining functions
 		"next/no-img-element": "off", // Disables the Next.js rule that disallows using <img> tags directly
+		"no-redeclare": "error",
 		"react/function-component-definition": [
 			"error",
 			{
