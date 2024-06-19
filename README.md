@@ -23,3 +23,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Resource
 
 - [Husky, Commitlint, and Prettier Configuration](https://theodorusclarence.com/shorts/husky-commitlint-prettier)
+- [Setting Up ESLint for Next.js 14 Projects](https://borstch.com/blog/development/setting-up-eslint-for-nextjs-14-projects)

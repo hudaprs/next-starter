@@ -13,9 +13,9 @@ import {
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 
-export default function LoginPage() {
+const LoginPage = () => {
 	return (
-		<div className='flex flex-col items-center justify-center h-screen container'>
+		<div className='flex flex-col items-center justify-center min-h-screen container'>
 			<Card className='mx-auto max-w-sm'>
 				<CardHeader>
 					<CardTitle className='text-2xl'>Login</CardTitle>
@@ -61,3 +61,5 @@ export default function LoginPage() {
 		</div>
 	)
 }
+
+export default LoginPage
