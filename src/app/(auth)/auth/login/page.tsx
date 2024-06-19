@@ -1,7 +1,5 @@
-// Next
 import Link from 'next/link'
 
-// Components
 import { Button } from '@/components/ui/button'
 import {
 	Card,
@@ -13,7 +11,7 @@ import {
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 
-const LoginPage = () => {
+const LoginPage = (): React.ReactNode => {
 	return (
 		<div className='flex flex-col items-center justify-center min-h-screen container'>
 			<Card className='mx-auto max-w-sm'>

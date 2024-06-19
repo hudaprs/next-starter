@@ -1,4 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+/**
+ * @type {import('next').NextConfig}
+ */
+const nextConfig = {
+	output: process.env.NODE_ENV === 'development' ? undefined : 'standalone'
+}
 
-export default nextConfig;
+export default nextConfig
