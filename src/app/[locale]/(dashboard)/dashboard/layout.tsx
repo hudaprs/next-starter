@@ -1,9 +1,9 @@
 const DashboardLayout = ({
-	children
+  children
 }: Readonly<{
-	children: React.ReactNode
+  children: React.ReactNode
 }>): React.ReactNode => {
-	return <>{children}</>
+  return <>{children}</>
 }
 
 export default DashboardLayout

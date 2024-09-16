@@ -1,129 +1,135 @@
 {
-	"extends": [
-		"plugin:@typescript-eslint/recommended", // Use recommended rules from @typescript-eslint/eslint-plugin
-		"next", // Use Next.js specific linting rules
-		"next/core-web-vitals", // Use Next.js Core Web Vitals rules for performance and best practices
-		"plugin:jsdoc/recommended-typescript-error", // Use recommended JSDoc rules with TypeScript error checking
-		"prettier" // Use Prettier for code formatting, which disables conflicting ESLint rules
-	],
-	"parser": "@typescript-eslint/parser", // Specifies the parser to be @typescript-eslint/parser for TypeScript code
-	"plugins": [
-		"@typescript-eslint", // Adds @typescript-eslint plugin for TypeScript specific linting rules
-		"prettier", // Adds Prettier plugin for integrating Prettier with ESLint
-		"jsdoc" // Adds JSDoc plugin for JSDoc linting
-	],
-	"rules": {
-		"prettier/prettier": "error", // Enforces Prettier formatting as an ESLint error
-		"@typescript-eslint/consistent-type-imports": "error", // Enforces consistent usage of type imports
-		"@typescript-eslint/no-explicit-any": "error", // Disallows usage of the `any` type
-		"@typescript-eslint/no-unused-vars": "error", // Disallows unused variables
-		"@typescript-eslint/no-empty-function": "error", // Disallows empty functions
-		"func-style": ["error", "expression"], // Enforces the use of function expressions for defining functions
-		"next/no-img-element": "off", // Disables the Next.js rule that disallows using <img> tags directly
-		"no-redeclare": "error",
-		"react/function-component-definition": [
-			"error",
-			{
-				"namedComponents": "arrow-function" // Enforces using arrow functions for named components
-			}
-		],
-		"sort-imports": [
-			"error",
-			{
-				"ignoreCase": true, // Ignores case while sorting imports
-				"ignoreDeclarationSort": true, // Ignores sorting of import declarations
-				"ignoreMemberSort": false // Enforces sorting of members within import declarations
-			}
-		],
-		"import/order": [
-			"error",
-			{
-				"groups": [
-					"builtin",
-					"external",
-					"internal",
-					"parent",
-					"sibling",
-					"index",
-					"object",
-					"type",
-					"unknown"
-				], // Specifies the order of import groups
-				"pathGroups": [
-					{
-						"pattern": "react",
-						"group": "external",
-						"position": "before" // Ensures react imports appear before other external imports
-					},
-					{
-						"pattern": "@/api/**",
-						"group": "internal",
-						"position": "before"
-					},
-					{
-						"pattern": "@/app/**",
-						"group": "internal",
-						"position": "after"
-					},
-					{
-						"pattern": "@/assets/**",
-						"group": "internal",
-						"position": "after"
-					},
-					{
-						"pattern": "@/components/**",
-						"group": "internal",
-						"position": "after"
-					},
-					{
-						"pattern": "@/constants/**",
-						"group": "internal",
-						"position": "after"
-					},
-					{
-						"pattern": "@/hooks/**",
-						"group": "internal",
-						"position": "after"
-					},
-					{
-						"pattern": "@/libs/**",
-						"group": "internal",
-						"position": "after"
-					},
-					{
-						"pattern": "@/providers/**",
-						"group": "internal",
-						"position": "after"
-					},
-					{
-						"pattern": "@/schemas/**",
-						"group": "internal",
-						"position": "after"
-					},
-					{
-						"pattern": "@/stores/**",
-						"group": "internal",
-						"position": "after"
-					},
-					{
-						"pattern": "@/utils/**",
-						"group": "internal",
-						"position": "after"
-					},
-					{
-						"pattern": "*.css",
-						"group": "unknown",
-						"position": "after" // Places CSS imports at the end
-					}
-				],
-				"pathGroupsExcludedImportTypes": ["react"],
-				"newlines-between": "always", // Enforces newlines between import groups
-				"alphabetize": {
-					"order": "asc", // Sorts imports alphabetically
-					"caseInsensitive": true // Ignores case while sorting
-				}
-			}
-		],
-		"jsdoc/check-tag-names": "off" // Disables checking of tag names in JSDoc comments
-	}
+  "extends": [
+    "plugin:@typescript-eslint/recommended", // Use recommended rules from @typescript-eslint/eslint-plugin
+    "next", // Use Next.js specific linting rules
+    "next/core-web-vitals", // Use Next.js Core Web Vitals rules for performance and best practices
+    "plugin:jsdoc/recommended-typescript-error", // Use recommended JSDoc rules with TypeScript error checking
+    "prettier" // Use Prettier for code formatting, which disables conflicting ESLint rules
+  ],
+  "parser": "@typescript-eslint/parser", // Specifies the parser to be @typescript-eslint/parser for TypeScript code
+  "plugins": [
+    "@typescript-eslint", // Adds @typescript-eslint plugin for TypeScript specific linting rules
+    "prettier", // Adds Prettier plugin for integrating Prettier with ESLint
+    "jsdoc" // Adds JSDoc plugin for JSDoc linting
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "useTabs": false,
+        "tabWidth": 2
+      }
+    ], // Enforces Prettier formatting as an ESLint error
+    "@typescript-eslint/consistent-type-imports": "error", // Enforces consistent usage of type imports
+    "@typescript-eslint/no-explicit-any": "error", // Disallows usage of the `any` type
+    "@typescript-eslint/no-unused-vars": "error", // Disallows unused variables
+    "@typescript-eslint/no-empty-function": "error", // Disallows empty functions
+    "func-style": ["error", "expression"], // Enforces the use of function expressions for defining functions
+    "next/no-img-element": "off", // Disables the Next.js rule that disallows using <img> tags directly
+    "no-redeclare": "error",
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": "arrow-function" // Enforces using arrow functions for named components
+      }
+    ],
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": true, // Ignores case while sorting imports
+        "ignoreDeclarationSort": true, // Ignores sorting of import declarations
+        "ignoreMemberSort": false // Enforces sorting of members within import declarations
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type",
+          "unknown"
+        ], // Specifies the order of import groups
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before" // Ensures react imports appear before other external imports
+          },
+          {
+            "pattern": "@/api/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/app/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/assets/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/components/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/constants/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/hooks/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/libs/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/providers/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/schemas/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/stores/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/utils/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "*.css",
+            "group": "unknown",
+            "position": "after" // Places CSS imports at the end
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "newlines-between": "always", // Enforces newlines between import groups
+        "alphabetize": {
+          "order": "asc", // Sorts imports alphabetically
+          "caseInsensitive": true // Ignores case while sorting
+        }
+      }
+    ],
+    "jsdoc/check-tag-names": "off" // Disables checking of tag names in JSDoc comments
+  }
 }

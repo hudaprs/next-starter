@@ -7,5 +7,5 @@ import { twMerge } from 'tailwind-merge'
  * @returns merged string of classes
  */
 export const cn = (...inputs: ClassValue[]): string => {
-	return twMerge(clsx(inputs))
+  return twMerge(clsx(inputs))
 }
